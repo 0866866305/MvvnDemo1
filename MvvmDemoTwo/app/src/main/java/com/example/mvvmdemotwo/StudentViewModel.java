@@ -6,7 +6,9 @@ import androidx.lifecycle.ViewModel;
 import java.util.ArrayList;
 
 public class StudentViewModel extends ViewModel {
+    // creat MutableLiveData nó sẽ được cập nhật và thông báo cho người quan sát của nó.
     MutableLiveData<ArrayList<Students>> liveData=new MutableLiveData<>();
+    //add data
     public  void  initData(){
         ArrayList<Students> list=new ArrayList<>();
         Students students=new Students("Hoang","Chi Dong",19);
@@ -17,6 +19,7 @@ public class StudentViewModel extends ViewModel {
         list.add(students1);
         list.add(students2);
         list.add(students3);
+        //post data
         liveData.postValue(list);
     }
 
